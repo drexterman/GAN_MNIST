@@ -43,3 +43,6 @@ def train_gan(epochs, batch_size=128):
 
 # Train the GAN
 train_gan(epochs=1000, batch_size=32)
+# Save the generator weights
+generator.save_weights("generator_weights.h5")
+print("Generator weights saved to generator_weights.h5")
