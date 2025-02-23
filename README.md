@@ -1,8 +1,37 @@
 # MNIST GAN with Interactive Slider: Generate Custom Handwritten Digits
+<!-- # GAN_MNIST Project -->
 
-This project implements a Generative Adversarial Network (GAN) that generates MNIST-style handwritten digits with an interactive slider control. The system combines deep learning with user interaction to allow real-time generation and manipulation of synthetic handwritten digits.
+The **GAN_MNIST** project is a Generative Adversarial Network (GAN) designed to generate and classify handwritten digits from the MNIST dataset. The project combines the power of GANs for image generation with a user-friendly slider interface to explore the continuous latent space of digit representations.
 
-The GAN architecture consists of a generator and discriminator network trained on the MNIST dataset. What makes this implementation unique is its conditional generation capability - users can control the type of digit generated through a slider interface that accepts values from 0 to 9. The generator takes both random noise and the slider value as input, enabling targeted generation of specific digits while maintaining the natural variation and style of handwritten numbers.
+## Key Features
+
+1. **GAN Architecture**:
+   - The project uses a **Conditional GAN (cGAN)** where the generator takes both random noise and a continuous slider value (between 0 and 9) as input to produce images that blend features of neighboring digits (e.g., an image that looks like a mix of 4 and 5).
+
+2. **Slider Functionality**:
+   - A **slider interface** allows users to smoothly transition between digits. As the slider moves, the generator produces images that morph from one digit to another, showcasing the model's ability to interpolate in the latent space.
+
+3. **Training**:
+   - The GAN is trained on the MNIST dataset, which consists of 60,000 grayscale images of handwritten digits (0–9). The generator learns to create realistic digit images, while the discriminator learns to distinguish between real and fake images.
+
+4. **Pre-Trained Weights**:
+   - The generator's weights can be saved after training, allowing users to skip the training phase and directly use the pre-trained model for image generation.
+
+5. **Applications**:
+   - **Data Augmentation**: Generate synthetic MNIST-like images to augment training data for other models.
+   - **Interactive Exploration**: Use the slider to explore how the generator interprets and blends features of different digits.
+   - **Educational Tool**: Demonstrate the capabilities of GANs and the concept of latent space in generative models.
+
+6. **Technical Stack**:
+   - Built using **TensorFlow** and **Keras** for deep learning.
+   - Utilizes **Matplotlib** for visualization and the slider interface.
+
+7. **Ease of Use**:
+   - Once trained, the model can be used locally by running the `slider_app.py` script, which loads the pre-trained weights and launches the interactive slider.
+
+<!-- This project implements a Generative Adversarial Network (GAN) that generates MNIST-style handwritten digits with an interactive slider control. The system combines deep learning with user interaction to allow real-time generation and manipulation of synthetic handwritten digits.
+
+The GAN architecture consists of a generator and discriminator network trained on the MNIST dataset. What makes this implementation unique is its conditional generation capability - users can control the type of digit generated through a slider interface that accepts values from 0 to 9. The generator takes both random noise and the slider value as input, enabling targeted generation of specific digits while maintaining the natural variation and style of handwritten numbers. -->
 
 ## Repository Structure
 ```
